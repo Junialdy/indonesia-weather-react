@@ -10,10 +10,10 @@ const WeatherAddModal = ({ handleToggle, cities, getWeather }) => {
 
     if (!addCity) {
       setErr("Please select the City!");
+      return;
     }
     getWeather(addCity);
     handleToggle();
-
     setErr("");
   };
 
@@ -46,7 +46,7 @@ const WeatherAddModal = ({ handleToggle, cities, getWeather }) => {
               </option>
             ))}
           </select>
-          <p className="px-2 text-sm text-red-500">{err}</p>
+          {err && <p className="px-2 text-sm text-red-500">{err}</p>}
           <button
             className={`form-button ${err ? "mt-2" : "mt-4"}`}
             type="submit"
