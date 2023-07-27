@@ -15,9 +15,6 @@ const App = () => {
   const controller = new AbortController();
 
   const getCity = () => {
-    // if (weathers != 0 && cities != 0) {
-    //   return;
-    // }
     const config = {
       headers: {
         "X-Parse-Application-Id": import.meta.env.VITE_APPLICATION_ID,
@@ -88,8 +85,7 @@ const App = () => {
   useEffect(() => {
     getCity();
   }, []);
-  // from-cyan-500 to-blue-500 DayTime
-  // from-indigo-950 to-blue-500 NightTime
+
   return (
     <div
       className={`bg-gradient-to-br ${
