@@ -10,6 +10,10 @@ Sebuah website berjenis website widget gitu yang berguna untuk melihat kondisi c
 - Tailwind
 - Vite
 
+## Web Demo
+
+<https://indonesia-weather.pages.dev/>
+
 ## Dekstop Preview
 
 ![Mockup Desktop](/public/mockup.png)
