@@ -44,12 +44,16 @@ const App = () => {
       return currentCities.filter((city) => city.name != findCity.name);
     });
 
+    const key = {
+      headers: {
+        key: import.meta.env.VITE_API_KEY,
+      },
+    };
+
     axios
       .get(
-        `http://api.weatherapi.com/v1/current.json?key=${
-          import.meta.env.VITE_API_KEY
-        }&q=${cityAdd}&aqi=no`,
-        { signal: controller.signal }
+        `https://api.weatherapi.com/v1/current.json?q=${cityAdd}&aqi=no`,
+        key
       )
       .then((res) =>
         setWeathers((current) => {
